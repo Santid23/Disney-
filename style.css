@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+
+body {
+    background-color: #FFFFFF;
+    width: auto;
+    height: fit-content;
+    overflow-x: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* NAV */
+
+.header {
+    height: 100px;
+    margin: -40px -10px -10px -10px;
+    padding: 40px;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+}
+
+button {
+    border: none;
+    background-color: white;
+}
+
+#bar {
+    display: none;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.menu nav ul {
+    display: flex;
+
+}
+
+.menu nav ul li {
+    list-style: none;
+    padding: 0px 20px;
+    text-transform: uppercase;
+    font-weight: bold ;
+}
+
+.menu nav ul li a {
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu nav ul li a:hover {
+    color: #0C77DA;
+}
+
+#submenu {
+    display: none;
+    position: absolute;
+}
+
+#submenu:hover {
+    
+}
+
+/* MAIN */
+
+main {
+    max-width: auto;
+    padding-right: 30px;
+    margin: auto;
+    margin-left: 30px;
+}
+
+h1 {
+    width: 100%;
+    display: inline-flex;
+    margin-left: 15%;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+/* PELICULAS */
+
+#pelis ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+
+
+#pelis ul li {
+    list-style: none;
+}
+
+#pelis ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#pelis ul li a img {
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+    align-items: center;
+}
+
+#pelis ul li a img:hover {
+    transform: scale(1.01);
+    transition: 0.5s;
+    filter: drop-shadow(0px 3px 3px rgba(0,0,0,0.5));
+}
+
+#pelis ul li a p {
+    padding-top: 5px;
+}
+
+.boton-pelis {
+    display: none;
+}
+
+#divredes {
+    padding-top: 100px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.iconos {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+
+section {
+    display: block;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+.logopiedepagina {
+    padding-top: 50px;
+    width: 80px;
+    height: 36px;
+}
+
+#ultimodiv {
+    display: inline-block;
+    text-align: center;
+}
+
+.enlacesfooter {
+    font-size: 0.75em;
+    padding: 0 8px 4px;
+    text-decoration: none;
+    color: black;
+}
+
+.enlacesfooter:hover {
+    color: #0C77DA;
+}
+
+
+/* MEDIA QUERIES */
+@media (width < 860px) {
+
+    #pelis ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .logo img {
+        position: absolute;
+        left: 40%;
+    }
+
+    button {
+        display: flex;
+        border: none;
+        background-color: white;
+    }
+
+   #bar {
+    display: block;
+   }
+
+   #dropdown {
+    position: absolute;
+   }
+
+   .menu {
+    position: absolute;
+    left: 20px;
+    top: 70px;
+    overflow: hidden;
+    z-index: 10;
+   }
+
+   .menu nav ul {
+    padding: 20px;
+    flex-direction: column;
+    background-color: #FFFFFF;
+   }
+
+   .menu nav ul {
+    width: 100%;
+    height: 100%;
+    padding: 10px 40px;
+    display: none;
+
+   }
+
+   .menu nav li:hover > ul {
+    display: block;
+   }
+
+   h1 {
+    padding-top: 20px;
+    margin-left: 0;
+   }
+
+   
+}
